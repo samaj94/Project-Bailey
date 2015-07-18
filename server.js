@@ -1,4 +1,8 @@
+var express = require('express');
+var app = express();
 var Twitter = require('twitter');
+
+app.use(express.static(__dirname + '/public'));
  
 var client = new Twitter({
   consumer_key: 'xOMDbOMHe0K18MctufpiA4KW2',
@@ -7,8 +11,15 @@ var client = new Twitter({
   access_token_secret: '3pynIwkP7LHpUIkf357mtcPsIUSaouQvIBXbo52Ktbtud'
 });
  
-client.post('statuses/update', {status: 'Hey guys, going to be testing a hackathon project. The test tweets are coming.'},  function(error, tweet, response){
-  if(error) throw error;
-  console.log(tweet);  // Tweet body. 
-  
+app.post('/', function(req, res) {
+    var loc = req.body.local;
+	
+	
+	res.sendFile(__dirname + '/public/index.html');
+	
 });
+
+
+app.listen(process.env.PORT || 3000);
+
+console.log("Running at Port 3000");
