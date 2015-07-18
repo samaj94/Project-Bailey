@@ -38,7 +38,12 @@
 						
 						<ul class="suggested-topics">
 							{{#each handles}}
-							<li>{{this.title}} - {{this.desc}}</li>
+							<li>
+								<div id="">
+									<span class="topic-titles">{{this.title}}: </span> 
+									<span class="topic-desc">{{this.desc}}</span>
+								</span>
+							</li>
 							{{/each}}
 						</ul>
 						
