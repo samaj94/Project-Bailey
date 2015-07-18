@@ -40,7 +40,7 @@ app.get('/', function (req, res){
 		mam:[
 			
 			{
-				test: "\<blockquote class=\"twitter-tweet\" lang=\"en\"><p lang=\"en\" dir=\"ltr\"\>I don&#39\;t always see eye to eye with \<a href=\"https://twitter.com/SenJohnMcCain\"\>@SenJohnMcCain\</a\>. But I honor his service and the sacrifices he made for our country.</p>&mdash; Dr. Rand Paul (@RandPaul) <a href=\"https://twitter.com/RandPaul/status/622484094853758980\">July 18, 2015</a></blockquote> <script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+				test: '<blockquote class="twitter-tweet" lang="en">Hi Mom</blockquote>'
 			}
 		]
 		

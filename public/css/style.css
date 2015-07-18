@@ -160,6 +160,11 @@ border-color: white;
 line-height: 20px;
 }
 	
+.tweet-others{
+font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+text-align:left;
+}
+
 #button-section input[type=submit]:hover {
 	color: white;
 	background-color: #465788;	
@@ -230,8 +235,33 @@ color: white;
 border-style: solid;
 border-width: 5px;
 border-color: white;
+text-align: left;
+text-overflow: ellipsis;
+	overflow: hidden;
 }
 
+#retweets h1{
+padding-bottom: .25em;
+}
+
+#retweets  a{
+color: #F6473e;
+}
+
+.photo{
+text-align: center;
+}
+.small-head{
+position: relative;
+max-height:4em;
+width: auto;
+border-radius:100px;
+text-align: center;
+}
+
+.small-head:hover{
+color: blue;
+}
 #retweets:hover{
 height: 25em;
 }
