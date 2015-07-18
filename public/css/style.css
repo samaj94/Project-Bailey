@@ -262,6 +262,12 @@ text-align: center;
 .small-head:hover{
 color: blue;
 }
+
+#retweet-this{
+position:absolute;
+opacity: 0;
+}
+
 #retweets:hover{
 height: 25em;
 }

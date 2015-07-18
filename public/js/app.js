@@ -1,8 +1,9 @@
 $(document).on("ready", function(){
 var suggest = $("#suggested");
 var retweet = $("#retweets");
+var smallhead = $("#testthis");
 var hover = $("#hover-columns");
-
+var rlink = $("#retweet-this");
 var statehover = false;
 
 retweet.on("mouseenter", function(e){
@@ -18,4 +19,9 @@ retweet.on("mouseleave", function(e){
 	console.log("Test2");
 	statehover = 0;
 })
+
+smallhead.on("mouseenter", function(e){
+	rlink.style.opacity = "1";	
+})
+
 });
