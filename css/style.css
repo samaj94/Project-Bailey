@@ -17,9 +17,14 @@ height: 3em;
 font-size: 2em;
 color: white;
 background-color: #ffbf38;
-font-family: 'Bitter', serif;
 }
 
+#text-top{
+position: relative;
+font-family: 'Bitter', serif;
+top: 50%;
+transform: translateY(-50%);
+}
 
 #retweets{
 background-color: #ffd06d;
