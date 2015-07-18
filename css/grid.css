@@ -1,0 +1,99 @@
+/*
+
+Sam Joseph
+Grid and White Box Code
+---------------------- 
+Grid System inspired by 
+Jan Drewniak
+and expanded on
+Source: http://j4n.co/blog/Creating-your-own-css-grid-system
+----------------------
+White Box System inspired by W3Schools and StackOverflow
+
+*/
+
+/*Grid Code*/
+
+    .grid-container{
+        width: 100%;       
+    }
+
+    .row:before, 
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }
+	
+    [class*='col-'] {
+        float: left; 
+		min-height: 1px;
+        width: 16.66%; 
+        padding-top: 0%;
+		padding-left: 1.5%;
+		padding-right: 1.5%;
+		padding-bottom: 2%;
+		/*background-color: white;*/
+    }
+
+	/*Height*/
+	.height-50 { height: 50px;}
+	.height-75 { height: 75px;}
+	.height-100 { height: 100px;}
+	.height-150 { height: 150px;}
+	.height-200 { height: 200px;	}
+	.height-250 { height: 250px;	}
+	.height-300{ height: 300px;}
+	.height-400 { height: 400px;	}
+	.height-800 { height: 800px;	}
+	
+	.height-100 img{
+		max-height: 75%;
+		max-width: 75%;
+	}
+	
+	
+	.height-200 img{
+		max-height:100px;
+	}
+	
+	/*Column Size*/
+	.col-1{ width: 97%; }
+    .col-2{ width: 47%; }
+    .col-3{ width: 30.333333%;    }
+    .col-4{ width: 22%; }
+    .col-5{ width: 17%; }
+    .col-6{ width: 13.66667%;   }
+	.col-7{ width: 11.2857%;   }
+	.col-8{ width: 9.5%;   }
+	.col-9{ width: 8.1111111111%;   }
+	.col-10{ width: 7%;   }
+    
+	.outline, .outline *{
+        outline: 1px solid #F6A1A1; 
+    }
+
+    [class*='col-'] > p {
+     /*background-color: #A3FFFF; */
+     padding: 0;
+     margin: 0;
+     text-align: center; 
+     color: black;
+    }
+	
+/* !Grid Code*/
+
+
+
+/*White Box Code*/
+.white-box {
+	width: 100%;
+	background-color: white;
+	/*text-align: center;*/
+	padding: 3% 0%;
+	border-radius: 10px;
+	position: relative;
+}
+
+/*!White Box Code*/
+

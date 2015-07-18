@@ -1,0 +1,52 @@
+html{
+margin: 0;
+padding: 0;
+}
+
+body{
+margin: 0;
+padding: 0;
+background-color: #ffc959;
+}
+
+.grid-container{
+text-align: center;
+}
+#message{
+height: 3em;
+font-size: 2em;
+color: white;
+background-color: #ffbf38;
+font-family: 'Bitter', serif;
+}
+
+
+#retweets{
+background-color: #ffd06d;
+color: white;
+border-radius: 10px;
+}
+
+h1{
+font-family: 'Montserrat', sans-serif;
+color: white;
+border-radius: 10px;
+}
+
+#tweetbox{
+background-color: #ffad00;
+color: white;
+border-radius: 10px;
+}
+
+#suggested{
+background-color: #ffad00;
+color: white;
+border-radius: 10px;
+}
+
+#past-tweets{
+background-color: #ffd06d;
+color: white;
+border-radius: 10px;
+}
