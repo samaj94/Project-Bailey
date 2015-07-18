@@ -26,14 +26,17 @@ app.post('/myaction', function(req, res) {
 
 app.get('/', function (req, res){
 	
-	var obj = require ('./tweettemp.json');
+	var obj = require('./tweettemp.json');
 	
+	//var obj = loadJSONfile(__dirname + '/tweettemp.json');
+	
+	console.log(obj);
 	
 	
 	res.render('index', {
 		
 		layout:false,
-		handles: obj
+		handles:obj
 		
 	})
 }

@@ -19,7 +19,7 @@ var client = new Twitter({
  
 
 
-client.get('followers/list.json?count=9', function(error, response){
+client.get('followers/list.json?count=2', function(error, response){
   if(error) throw error;
   followers = response;
   
@@ -38,23 +38,24 @@ client.get('followers/list.json?count=9', function(error, response){
   
 	  client.get(hold, function(error, res){
 		  
-		   console.log(res);
-		  
+		   //console.log(res);
+		 
+		 /* 
 		  var str = JSON.parse(res);
 		  
 		  str.users.forEach(function(item)
 	  {
 	  	obj.push(item.name)
 		
-	  })
+	  })*/
 		  
 	
-		  /*for(var test in res.users) {
+		  for(var test in res.users) {
 			  
-		  	 obj = obj.concat()
-			  
-		     console.log("username:"+  res.users[test].name);
-		  }*/
+		  	 //obj = obj.concat()
+			  obj.push(res.users[test].name); 
+		     //console.log("username:"+  res.users[test].name);
+		  }
 	
 	  });
   }
