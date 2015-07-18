@@ -2,9 +2,17 @@ var express = require('express');
 var app = express();
 var Twitter = require('twitter');
 
+var hbs = require('hbs');
+
+var path = require('path');
+
 var followers;
+app.set('views', path.join(process.cwd(), './views'))
+app.set('view engine', 'hbs')
+app.engine('hbs', hbs.__express)
 
 app.use(express.static(__dirname + '/public'));
+
  
 var client = new Twitter({
   consumer_key: 'xOMDbOMHe0K18MctufpiA4KW2',
@@ -13,22 +21,6 @@ var client = new Twitter({
   access_token_secret: '3pynIwkP7LHpUIkf357mtcPsIUSaouQvIBXbo52Ktbtud'
 });
  
-app.get('/', function(req, res) {
-	
-	console.log('TEST');
-	
-	client.get('followers/list', function(error, response){
-  	  if(error) throw error;
-	  console.log('TEST');
-  		console.log(response);  // Tweet body. 
-  
-	});
-	
-	res.sendFile(__dirname + '/public/hworld.html');
-
-	console.log('TEST');
-	
-});
 
 app.post('/myaction', function(req, res) {
     
@@ -36,20 +28,44 @@ app.post('/myaction', function(req, res) {
 });
 
 
-client.get('followers/list.json?count=2', function(error, response){
+client.get('followers/list.json?count=9', function(error, response){
   if(error) throw error;
   followers = response;
   //console.log(followers.users[1].name);
   
-  client.get('friends/list.json?user_id=' + followers.users[1].id + '&count=1', function(error,res){
-  	
-	console.log(res)
+  
+  
+  
+  for(var fcount in followers.users)
+  {
+	  var hold = 'friends/list.json?cursor=-1&screen_name=' + followers.users[fcount].screen_name + '&skip_status=true';
+  
+  
+	  client.get(hold, function(error,res){
+		  
+		  console.log(res);
 	
+		  for(var test in res.users) {
+		     console.log("username:"+  res.users[test].name);
+		  }
 	
-  });
+	  });
+  }
 
 });
 
+app.get('/', function (req, res){
+	
+	res.render('index', {
+		
+		layout:false,
+		handles: ['@jasonkalmeida', '@jsnklmd', '@twitter']
+		
+	})
+}
+
+
+)
 
 app.listen(process.env.PORT || 3000);
 

@@ -34,7 +34,17 @@
 				<div class="col-2">
 									<div id="suggested">
 						<h1>Other Suggested Topics:</h1>
-						<p></p>
+						
+						<ul>
+							{{#each handles}}
+							<li>{{this}}</li>
+							{{/each}}
+						</ul>
+						
+						<p>
+							
+							
+						</p>
 					</div>
 					<div id="past-tweets">
 						<h1>Past Tweets:</h1>
