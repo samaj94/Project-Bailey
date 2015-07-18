@@ -26,6 +26,7 @@ text-shadow: 1px 1px 5px #434343;
 position: relative;
 font-family: 'Bitter', serif;
 top: 50%;
+-webkit-transform: translateY(-50%);
 transform: translateY(-50%);
 }
 
