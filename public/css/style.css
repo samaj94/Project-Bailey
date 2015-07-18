@@ -66,6 +66,12 @@ margin-bottom: 1em;
 
 textarea {
 resize: none;
+font-family: 'Bitter', serif;
+font-size: 1em;
+}
+
+.r-tweet-posts{
+font-size: 1.5em;
 }
 
 #tweet{
@@ -75,10 +81,17 @@ border-radius: 10px;
 border: 0px;
 }
 
-.button-section{
-
-}
-
+#button-section input[type=submit] {
+	padding:5px 15px; 
+	background:#ccc; 
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+	color: white;
+	height: 40px;
+	font-size: 20px;
+	}
 #suggested{
 background-color: #143EB1;
 color: white;
