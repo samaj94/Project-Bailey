@@ -53,7 +53,7 @@ client.get('followers/list.json?count=2', function(error, response){
 		  for(var test in res.users) {
 			  
 		  	 //obj = obj.concat()
-			  obj.push(res.users[test].name); 
+			  obj.push(res.users[test].screen_name); 
 		     //console.log("username:"+  res.users[test].name);
 		  }
 	
