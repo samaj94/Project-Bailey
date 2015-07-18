@@ -21,8 +21,9 @@ for (var test2 in topics)
   
 			if(topics[test2].endorse[test3] == obj[test])
 			{
-				if (post.indexOf(topics[test2].issue) == -1)
-					post.push(topics[test2].issue);
+				
+					post.push({"name":topics[test2].issue,"description":topics[test2].descrip});
+				
 					
 			}
 			
@@ -38,4 +39,6 @@ for (var test2 in topics)
   
 }
 
-console.log(post);
+post = JSON.stringify(post);
+
+fs.writeFileSync(path.join(__dirname, './topics.json'), post , 'utf8')

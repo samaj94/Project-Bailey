@@ -27,22 +27,17 @@ app.post('/myaction', function(req, res) {
 app.get('/', function (req, res){
 	
 	var obj = require('./tweettemp.json');
+	var suggest = require('./topics.json');
 	
 	//var obj = loadJSONfile(__dirname + '/tweettemp.json');
 	
-	console.log(obj);
+	console.log(suggest);
 	
 	
 	res.render('index', {
 		
 		layout:false,
-		handles:obj,
-		mam:[
-			
-			{
-				test: '<blockquote class="twitter-tweet" lang="en">Hi Mom</blockquote>'
-			}
-		]
+		handles:suggest
 		
 	})
 }
