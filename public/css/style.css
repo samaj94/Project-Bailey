@@ -6,7 +6,19 @@ padding: 0;
 body{
 margin: 0;
 padding: 0;
-background-color: #cfd7ed;
+}
+
+#background-blur{
+background: url(../flag.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height:100%;
+  z-index: -5;
+  position: absolute;
+  -webkit-filter: blur(10px);
 }
 
 .grid-container{
@@ -38,26 +50,39 @@ top: 50%;
 transform: translateY(-50%);
 }
 
+form{
+margin-bottom: 1em;
+}
 #retweets{
 background-color: #4866B6;
 color: white;
 border-radius: 10px;
 box-shadow: 0px 0px 2px #000000;
-height: 8em;
+height: 20em;
+margin-bottom: 2em;
+transition: .5s;
+}
+
+#retweets:hover{
+height: 25em;
 }
 
 body h1{
-font-family: 'Montserrat', sans-serif;
+text-align: left;
+padding-top: .5em;
+padding-left: .5em;
+font-family: 'Bitter', serif;
 color: white;
 font-weight: 400;
 border-radius: 10px;
 margin: 0px;
+text-shadow: 0px 0px 10px #434343;
 }
 
 #tweetbox{
 background-color: #143EB1;
 color: white;
-height: 8em;
+height: 28em;
 border-radius: 10px;
 box-shadow: 0px 0px 6px #000000;
 margin-bottom: 1em; 
@@ -66,18 +91,18 @@ margin-bottom: 1em;
 
 textarea {
 resize: none;
-font-family: 'Bitter', serif;
-font-size: 1em;
+font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 2em;
 }
 
 .tweets-posts{
-font-size: 1.5em;
-font-family: 'Bitter', serif;
-font-weight: 400;
+font-size: 1.25em;
 font-style: italic;
 text-align: left;
 margin: .5em;
-
+font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 300;
+padding-left: 1.5em;
 }
 
 #tweet{
@@ -87,17 +112,26 @@ border-radius: 10px;
 border: 0px;
 }
 
+#button-section{
+text-align: right;
+}
+
 #button-section input[type=submit] {
-	padding:5px 15px; 
-	background:#ccc; 
+	padding:.25em 1em; 
+	background-color: #ccc;
 	border:0 none;
 	cursor:pointer;
 	-webkit-border-radius: 5px;
 	border-radius: 5px; 
 	color: white;
-	height: 40px;
+	height: 2em;
 	font-size: 20px;
+	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
+	
+#button-section input[type=submit]:hover {
+	background-color: #f92f39; 
+}
 #suggested{
 background-color: #143EB1;
 color: white;
@@ -105,6 +139,7 @@ border-radius: 10px;
 box-shadow: 0px 0px 2px #000000;
 padding-top: .1em;
 padding-bottom: .15em;
+height: 10em;
 }
 
 #past-tweets{
@@ -112,5 +147,10 @@ background-color: #4866B6;
 color: white;
 border-radius: 10px;
 box-shadow: 0px 0px 2px #000000;
-height: 8em;
+height: 20em;
+transition: .5s;
+}
+
+#past-tweets:hover{
+height: 25em;
 }
