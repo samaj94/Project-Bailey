@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var Twitter = require('twitter');
 
+var followers;
+
 app.use(express.static(__dirname + '/public'));
  
 var client = new Twitter({
@@ -11,12 +13,41 @@ var client = new Twitter({
   access_token_secret: '3pynIwkP7LHpUIkf357mtcPsIUSaouQvIBXbo52Ktbtud'
 });
  
-app.post('/', function(req, res) {
-    var loc = req.body.local;
+app.get('/', function(req, res) {
+	
+	console.log('TEST');
+	
+	client.get('followers/list', function(error, response){
+  	  if(error) throw error;
+	  console.log('TEST');
+  		console.log(response);  // Tweet body. 
+  
+	});
+	
+	res.sendFile(__dirname + '/public/hworld.html');
+
+	console.log('TEST');
+	
+});
+
+app.post('/myaction', function(req, res) {
+    
+	
+});
+
+
+client.get('followers/list.json?count=2', function(error, response){
+  if(error) throw error;
+  followers = response;
+  //console.log(followers.users[1].name);
+  
+  client.get('friends/list.json?user_id=' + followers.users[1].id + '&count=1', function(error,res){
+  	
+	console.log(res)
 	
 	
-	res.sendFile(__dirname + '/public/index.html');
-	
+  });
+
 });
 
 
