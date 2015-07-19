@@ -5,6 +5,7 @@ var smallhead = $("#testthis");
 var hover = $("#hover-columns");
 var rlink = $("#retweet-this");
 var statehover = false;
+rlink.style.opacity = "0";
 
 retweet.on("mouseenter", function(e){
 	if(statehover == 0){
