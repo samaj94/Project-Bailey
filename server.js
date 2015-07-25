@@ -9,6 +9,13 @@ var path = require('path');
 var fs = require('fs');
 
 
+var client = new Twitter({
+  consumer_key: KEY-HERE,
+  consumer_secret: KEY-HERE,
+  access_token_key: KEY-HERE,
+  access_token_secret: KEY-HERE
+});
+
 var followers;
 app.set('views', path.join(process.cwd(), './views'))
 app.set('view engine', 'hbs')
@@ -18,6 +25,13 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.post('/myaction', function(req, res) {
+	
+	string = ".@HillaryClinton, Lyft and Airbnb are great for America!"
+	
+	client.post('statuses/update', {status: string},  function(error, tweet, response){
+	  if(error) throw error;
+	  console.log(tweet);  // Tweet body. 
+	});
     
 	
 });

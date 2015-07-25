@@ -28,3 +28,10 @@ client.post('statuses/update', {status: 'Hey guys, going to be testing a hackath
   console.log(tweet);  // Tweet body. 
   
 });
+
+
+//HANDLE SHIT
+
+{{#each mam}}
+<li>{{this.test}}</li>
+{{/each}}

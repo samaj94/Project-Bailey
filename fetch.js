@@ -11,10 +11,10 @@ var followers;
 var fs = require('fs');
 
 var client = new Twitter({
-  consumer_key: 'xOMDbOMHe0K18MctufpiA4KW2',
-  consumer_secret: 'o6qcAKtpXQazeo37kRrCiym4z8Y3pQKoxZnp2HVuVzQFpOR70n',
-  access_token_key: '2727197461-fAW2kCQ6hoYLLEMNODbDgBVPUvWWJ0nYUv8Fd4E',
-  access_token_secret: '3pynIwkP7LHpUIkf357mtcPsIUSaouQvIBXbo52Ktbtud'
+  consumer_key: KEY-HERE,
+  consumer_secret: KEY-HERE,
+  access_token_key: KEY-HERE,
+  access_token_secret: KEY-HERE
 });
  
 
